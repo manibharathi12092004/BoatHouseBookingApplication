@@ -1,0 +1,29 @@
+
+#home1 button,#home2 button , #home3 button { 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    background-color: rgb(248, 244, 244);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 60px;
+    margin-right: 60px;
+
+}
+#home1 button:hover,#home2 button:hover , #home3 button:hover{
+    background-color: rgb(248, 244, 244);
+}
+#home{
+    margin-bottom: 600px;
+    margin-left:550px;
+    display:flex;
+    justify-content: space-around;
+    align-items: right;
+}    

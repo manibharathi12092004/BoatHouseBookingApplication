@@ -1,0 +1,86 @@
+
+ body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #h1 {
+    width: 120%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #f3f3f3;
+    box-shadow:  8px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  #h1 h1 {
+    margin-bottom: 20px;
+    color: #050505;
+    font-size: 33px;
+  }
+  
+  #h2, #h3 {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  #h1 label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #665f5f;
+  }
+  
+
+ #h1 input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+ #h1 button[type="submit"] {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100%;
+    padding: 10px;
+    background-color: #c804e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    
+  }
+ #h1 button[type="submit2"] {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 40%;
+    padding: 10px;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+   
+    
+  }
+  
+ #h1 button[type="submit2"]:hover {
+    background-color: #049bff;
+  }
+ #h1 button[type="submit"]:hover {
+    background-color: #000000;
+  }
+  
