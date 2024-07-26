@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import './SignUp.css';
 import { sign_Up } from '../Redux/authActions'; 
+import { GiCrossMark } from "react-icons/gi";
 
 const SignUp = () => {
   const [name, setName] = useState('');
@@ -27,38 +29,43 @@ const SignUp = () => {
   };
 
   return (
-    <div id="h11">
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSubmit}>
-        <div id="h14">
-          <label>Name:</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </div>
-        <div id="h12">
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div id="h13">
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Register</button>
-      </form>
+    <div>
+      <Link to="/">
+        <GiCrossMark className="cross" />
+      </Link>
+      <div id="h11">
+        <h1>Sign Up</h1>
+        <form onSubmit={handleSubmit}>
+          <div id="h14">
+            <label>Name:</label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
+          <div id="h12">
+            <label>Email:</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div id="h13">
+            <label>Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">Register</button>
+        </form>
+      </div>
     </div>
   );
 };

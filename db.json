@@ -5,12 +5,13 @@
       "name": "Mani",
       "email": "mani12@gmail.com",
       "password": "M@123"
-    },
+    }
+  ],
+  "admins": [
     {
-      "id": "b301",
-      "name": "Abi",
-      "email": "abi@gmail.com",
-      "password": "123456"
+      "id": "1",
+      "email": "adminmani123@gmail.com",
+      "password": "ManiOwner@0507"
     }
   ]
 }

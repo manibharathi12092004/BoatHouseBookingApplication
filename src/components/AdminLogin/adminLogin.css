@@ -1,0 +1,62 @@
+#admin-login {
+    width: 120%;
+    max-width: 400px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f0f2f5, #80bee5);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 30px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    text-align: center;
+    margin: auto;
+  }
+  
+  #admin-login h1 {
+    margin-bottom: 30px;
+    color: #050505;
+    font-size: 33px;
+  }
+  
+  #admin-login label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #665f5f;
+  }
+  
+  #admin-login input[type="email"],
+  #admin-login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+  }
+  
+  #admin-login button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top:20px;
+    background-color: #c804e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #admin-login button[type="submit"]:hover {
+    background-color: #000000;
+  }
+  
+.cross1 {
+  position: absolute;
+  top: 75px;
+  right: 400px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #000000;
+}
+  

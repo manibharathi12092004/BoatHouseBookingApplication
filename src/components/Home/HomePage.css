@@ -1,29 +1,53 @@
-
-#home1 button,#home2 button , #home3 button { 
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 500;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    justify-content: space-between;
-    color: rgb(0, 0, 0);
-    background-color: rgb(248, 244, 244);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 60px;
-    margin-right: 60px;
-
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
 }
-#home1 button:hover,#home2 button:hover , #home3 button:hover{
-    background-color: rgb(248, 244, 244);
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#home{
-    margin-bottom: 600px;
-    margin-left:550px;
-    display:flex;
-    justify-content: space-around;
-    align-items: right;
-}    
+
+.navbar {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  background-color: #ffffff;
+  padding: 10px 0;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 7px 15px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-button {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  color: #000;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 20px;
+  transition: background-color 0.9s, transform 0.4s;
+}
+
+.nav-button:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.20);
+}
+
+#home-content {
+  margin-top: 60px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 60px); 
+}

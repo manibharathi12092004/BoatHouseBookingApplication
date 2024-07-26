@@ -1,57 +1,73 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 #h11 {
-    width: 120%;
-    max-width: 400px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background-color: #f3f3f3;
-    box-shadow:  8px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  #h11 h1 {
-    margin-bottom: 20px;
-    color: #050505;
-    font-size: 33px;
-  }
-  
-  #h12, #h13 , #h14 {
-    margin-bottom: 15px;
-    text-align: left;
-  }
-  
-  #h11 label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #665f5f;
-  }
-  
+  width: 120%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f0f2f5, #80bee5);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 30px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  text-align: center;
+}
 
- #h11 input[type="text"],input[type="email"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
+#h11 h1 {
+  margin-bottom: 20px;
+  color: #050505;
+  font-size: 33px;
+}
 
- #h11 button[type="submit"] {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    width: 100%;
-    padding: 10px;
-    background-color: #c804e1;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    
-  }
+#h12, #h13, #h14 {
+  margin-bottom: 15px;
+  text-align: left;
+}
 
-  #h11 button[type="submit"]:hover {
-    background-color: #000000;
-  }
-  
+#h11 label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #665f5f;
+}
+
+#h11 input[type="text"], #h11 input[type="email"], #h11 input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#h11 button[type="submit"] {
+  font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
+  width: 100%;
+  padding: 10px;
+  background-color: #c804e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#h11 button[type="submit"]:hover {
+  background-color: #000000;
+}
+
+.cross {
+  position: absolute;
+  top: 75px;
+  right: 455px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #000000;
+}
