@@ -14,6 +14,64 @@
       "password": "ManiOwner@0507"
     }
   ],
+  "boats": [
+    {
+      "id": 2,
+      "name": "Ocean Explorer",
+      "price": "45000/day",
+      "location": "Key West",
+      "capacity": 8
+    },
+    {
+      "id": 8,
+      "name": "Sea Breeze",
+      "price": "37000/day",
+      "location": "Palm Beach",
+      "capacity": 6
+    },
+    {
+      "id": 9,
+      "name": "Marine Dream",
+      "price": "32000/day",
+      "location": "Miami Beach",
+      "capacity": 14
+    }
+  ],
+  "bookings": [
+    {
+      "id": "32a1",
+      "name": "Mani",
+      "email": "manibharathi120904@gmail.com",
+      "age": "25",
+      "date": "2024-07-31",
+      "persons": "3",
+      "rooms": "1",
+      "food": "veg",
+      "days": "3"
+    },
+    {
+      "id": "f3e3",
+      "name": "Abi",
+      "email": "abii123@gmail.com",
+      "age": "22",
+      "date": "2024-08-10",
+      "persons": "7",
+      "rooms": "5",
+      "food": "non-veg",
+      "days": "3"
+    },
+    {
+      "id": "250d",
+      "name": "Dev",
+      "email": "dev1@gmail.com",
+      "age": "22",
+      "date": "2024-08-10",
+      "persons": "5",
+      "rooms": "2",
+      "food": "non-veg",
+      "days": "3"
+    }
+  ],
   "boatData": [
     {
       "id": 1,
@@ -24,8 +82,16 @@
       "location": "Miami",
       "type": "Sailboat",
       "capacity": 6,
-      "features": ["GPS", "Life Jackets", "Radio"],
-      "extraImages": ["/img/sea_breeze_1.jpg", "/img/sea_breeze_2.jpg", "/img/sea_breeze_3.jpg"]
+      "features": [
+        "GPS",
+        "Life Jackets",
+        "Radio"
+      ],
+      "extraImages": [
+        "/img/sea_breeze_1.jpg",
+        "/img/sea_breeze_2.jpg",
+        "/img/sea_breeze_3.jpg"
+      ]
     },
     {
       "id": 2,
@@ -36,8 +102,17 @@
       "location": "Key West",
       "type": "Yacht",
       "capacity": 8,
-      "features": ["GPS", "Life Jackets", "Radio", "Fishing Gear"],
-      "extraImages": ["/img/b21.jpg", "/img/b23.jpg", "/img/b28.jpg"]
+      "features": [
+        "GPS",
+        "Life Jackets",
+        "Radio",
+        "Fishing Gear"
+      ],
+      "extraImages": [
+        "/img/b21.jpg",
+        "/img/b23.jpg",
+        "/img/b28.jpg"
+      ]
     },
     {
       "id": 3,
@@ -48,8 +123,17 @@
       "location": "Fort Lauderdale",
       "type": "Motorboat",
       "capacity": 4,
-      "features": ["GPS", "Life Jackets", "Radio", "Sun Deck"],
-      "extraImages": ["/img/b32.jpg", "/img/b34.jpg", "/img/b35.jpg"]
+      "features": [
+        "GPS",
+        "Life Jackets",
+        "Radio",
+        "Sun Deck"
+      ],
+      "extraImages": [
+        "/img/b32.jpg",
+        "/img/b34.jpg",
+        "/img/b35.jpg"
+      ]
     },
     {
       "id": 4,
@@ -60,8 +144,17 @@
       "location": "Naples",
       "type": "Catamaran",
       "capacity": 10,
-      "features": ["GPS", "Life Jackets", "Radio", "Kitchen"],
-      "extraImages": ["/img/b42.jpg", "/img/b45.jpg", "/img/b47.jpg"]
+      "features": [
+        "GPS",
+        "Life Jackets",
+        "Radio",
+        "Kitchen"
+      ],
+      "extraImages": [
+        "/img/b42.jpg",
+        "/img/b45.jpg",
+        "/img/b47.jpg"
+      ]
     },
     {
       "id": 5,
@@ -72,8 +165,17 @@
       "location": "Tampa",
       "type": "Sailboat",
       "capacity": 12,
-      "features": ["GPS", "Life Jackets", "Radio", "Cabin"],
-      "extraImages": ["/img/b54.jpg", "/img/b56.jpg", "/img/b59.jpg"]
+      "features": [
+        "GPS",
+        "Life Jackets",
+        "Radio",
+        "Cabin"
+      ],
+      "extraImages": [
+        "/img/b54.jpg",
+        "/img/b56.jpg",
+        "/img/b59.jpg"
+      ]
     },
     {
       "id": 6,
@@ -84,8 +186,17 @@
       "location": "Sanibel",
       "type": "Houseboat",
       "capacity": 6,
-      "features": ["GPS", "Life Jackets", "Radio", "Fishing Gear"],
-      "extraImages": ["/img/b61.jpg", "/img/b63.jpg", "/img/b64.jpg"]
+      "features": [
+        "GPS",
+        "Life Jackets",
+        "Radio",
+        "Fishing Gear"
+      ],
+      "extraImages": [
+        "/img/b61.jpg",
+        "/img/b63.jpg",
+        "/img/b64.jpg"
+      ]
     },
     {
       "id": 7,
@@ -96,8 +207,16 @@
       "location": "Clearwater",
       "type": "Jet Ski",
       "capacity": 2,
-      "features": ["GPS", "Life Jackets", "Radio"],
-      "extraImages": ["/img/b73.jpg", "/img/b74.jpg", "/img/b75.jpg"]
+      "features": [
+        "GPS",
+        "Life Jackets",
+        "Radio"
+      ],
+      "extraImages": [
+        "/img/b73.jpg",
+        "/img/b74.jpg",
+        "/img/b75.jpg"
+      ]
     },
     {
       "id": 8,
@@ -108,8 +227,17 @@
       "location": "Palm Beach",
       "type": "Fishing Boat",
       "capacity": 6,
-      "features": ["GPS", "Life Jackets", "Radio", "Fishing Gear"],
-      "extraImages": ["/img/b82.jpg", "/img/b83.jpg", "/img/b89.jpg"]
+      "features": [
+        "GPS",
+        "Life Jackets",
+        "Radio",
+        "Fishing Gear"
+      ],
+      "extraImages": [
+        "/img/b82.jpg",
+        "/img/b83.jpg",
+        "/img/b89.jpg"
+      ]
     },
     {
       "id": 9,
@@ -120,8 +248,17 @@
       "location": "Miami Beach",
       "type": "Yacht",
       "capacity": 14,
-      "features": ["GPS", "Life Jackets", "Radio", "Jacuzzi"],
-      "extraImages": ["/img/b1.jpg", "/img/b3.jpg", "/img/b4.jpg"]
+      "features": [
+        "GPS",
+        "Life Jackets",
+        "Radio",
+        "Jacuzzi"
+      ],
+      "extraImages": [
+        "/img/b1.jpg",
+        "/img/b3.jpg",
+        "/img/b4.jpg"
+      ]
     },
     {
       "id": 10,
@@ -132,8 +269,17 @@
       "location": "St. Petersburg",
       "type": "Sailboat",
       "capacity": 4,
-      "features": ["GPS", "Life Jackets", "Radio", "Sun Deck"],
-      "extraImages": ["/img/bed21.jpg", "/img/bed22.jpg", "/img/bed24.jpg"]
+      "features": [
+        "GPS",
+        "Life Jackets",
+        "Radio",
+        "Sun Deck"
+      ],
+      "extraImages": [
+        "/img/bed21.jpg",
+        "/img/bed22.jpg",
+        "/img/bed24.jpg"
+      ]
     },
     {
       "id": 11,
@@ -144,8 +290,17 @@
       "location": "Jacksonville",
       "type": "Motorboat",
       "capacity": 8,
-      "features": ["GPS", "Life Jackets", "Radio", "Fishing Gear"],
-      "extraImages": ["/img/bed31.jpg", "/img/bed33.jpg", "/img/bed36.jpg"]
+      "features": [
+        "GPS",
+        "Life Jackets",
+        "Radio",
+        "Fishing Gear"
+      ],
+      "extraImages": [
+        "/img/bed31.jpg",
+        "/img/bed33.jpg",
+        "/img/bed36.jpg"
+      ]
     },
     {
       "id": 12,
@@ -156,8 +311,17 @@
       "location": "Fort Myers",
       "type": "Catamaran",
       "capacity": 10,
-      "features": ["GPS", "Life Jackets", "Radio", "Cabin"],
-      "extraImages": ["/img/bed41.jpg", "/img/bed43.jpg", "/img/bed45.jpg"]
-    }    
+      "features": [
+        "GPS",
+        "Life Jackets",
+        "Radio",
+        "Cabin"
+      ],
+      "extraImages": [
+        "/img/bed41.jpg",
+        "/img/bed43.jpg",
+        "/img/bed45.jpg"
+      ]
+    }
   ]
 }

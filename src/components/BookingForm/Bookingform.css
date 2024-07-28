@@ -1,0 +1,85 @@
+.booking-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top:400px;
+    margin-bottom: 80px;
+    padding-top: 20px;
+    padding-right: 60px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    background-color: #f9f9f9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f0f2f5, #60b2e5);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 30px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.booking-form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.booking-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-form-container label {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.booking-form-container input[type="text"],
+.booking-form-container input[type="email"],
+.booking-form-container input[type="number"],
+.booking-form-container input[type="date"]
+ {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+.booking-form-container select
+{
+    width: 106%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+.booking-form-container button[type="submit"],
+.booking-form-container button[type="button"] {
+    padding: 10px;
+    width: 106%;
+    margin-top: 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.booking-form-container button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.booking-form-container button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.booking-form-container button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+.booking-form-container button[type="button"]:hover {
+    background-color: #e53935;
+}

@@ -23,7 +23,7 @@ body {
   position: absolute;
   top: 20px;
   left: 20px;
-  margin-left:890px;
+  margin-left:970px;
   margin-top:50px;
   cursor: pointer;
 }
@@ -32,6 +32,7 @@ body {
   width: 140%;
   max-width: 400px;
   padding: 20px;
+  padding-bottom: 30px;
   border: 1px solid #ddd;
   border-radius: 12px;
   background: linear-gradient(135deg, #f0f2f5, #80bee5);
@@ -84,5 +85,5 @@ body {
 
 .register-button:hover {
   background-color: #000000;
-  transform: scale(1.05);
+  
 }

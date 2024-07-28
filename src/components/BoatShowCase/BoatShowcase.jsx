@@ -29,6 +29,7 @@ const BoatShowcase = () => {
     };
 
     return (
+        
         <div className="boat-showcase-container">
             <h1>Special Boats</h1>
             <div className="search-container">

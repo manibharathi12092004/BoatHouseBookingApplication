@@ -1,10 +1,9 @@
-/* BoatShowcase.css */
-
 .boat-showcase-container {
-    margin-top:1300px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.347); /* Light blue background */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 760px;
+    
 }
 
 .boat-showcase-container h1 {
@@ -23,6 +22,7 @@
     border: 1px solid #00796b; /* Teal border */
     border-radius: 4px;
     width: 300px;
+    box-sizing: border-box; /* Ensures padding and border are included in width */
 }
 
 .boat-grid {
@@ -38,9 +38,11 @@
     border-radius: 8px;
     padding: 20px;
     width: 300px;
+    height: 400px; /* Fixed height for consistency */
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    box-sizing: border-box; /* Ensures padding and border are included in width and height */
 }
 
 .boat-card:hover {
@@ -49,7 +51,8 @@
 
 .boat-image {
     width: 100%;
-    height: auto;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
     border-radius: 8px;
 }
 
@@ -67,3 +70,4 @@
     font-weight: bold;
     color: #d32f2f; /* Red color for the price */
 }
+

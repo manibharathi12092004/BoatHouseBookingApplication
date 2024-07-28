@@ -1,3 +1,4 @@
+// App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/Home/HomePage';
@@ -8,6 +9,9 @@ import AdminPage from './components/Admin/AdminPage';
 import Profile from './components/Profile1/Profile';
 import SetupProfile from './components/SetUpProfile/SetupProfile';
 import BoatDetail from './components/BoatDetails/BoatDetail';
+import Bookingform from './components/BookingForm/Bookingform';
+import UserBookedDetails from './components/UserBookedDetail/UserBookedDetails';
+import BoatBookedDetails from './components/BoatBookedDetail/BoatBookedDetails';
 
 const App = () => {
   return (
@@ -21,6 +25,9 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/setup-profile" element={<SetupProfile />} />
         <Route path="/boat/:id" element={<BoatDetail />} />
+        <Route path="/booking" element={<Bookingform />} />
+        <Route path="/user-booked-details" element={<UserBookedDetails />} />
+        <Route path="/boat-booked-details" element={<BoatBookedDetails />} />
       </Routes>
     </Router>
   );

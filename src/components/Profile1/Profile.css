@@ -47,8 +47,8 @@ button {
 button:hover {
   background-color: #000000;
 }
-.cross2{
-  margin-top:150px;
+.cross4{
+  margin-top:170px;
   font-size: 25px;
   color: #000000;
   position: absolute;
@@ -64,6 +64,6 @@ button:hover {
   position: absolute;
   top: 20px;
   left: 20px;
-  margin-left:990px;
+  margin-left:1100px;
   cursor: pointer;
 }

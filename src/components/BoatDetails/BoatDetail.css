@@ -1,9 +1,9 @@
-.boat-detail-container {
+/* BoatDetail.css */
 
+.boat-detail-container {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.347); /* Light blue background */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top:150px;
 }
 
 .boat-detail-main {
@@ -82,3 +82,13 @@
 .boat-extra-details li {
     margin: 5px 0;
 }
+
+.cross8{
+    right: 20px;
+    margin-left:1220px;
+    margin-right: -180px;
+    margin-top:120px;
+    cursor: pointer;
+    font-size: 25px;
+    color: #000000;
+  }

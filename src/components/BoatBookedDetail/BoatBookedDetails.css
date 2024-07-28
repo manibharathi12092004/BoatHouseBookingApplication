@@ -1,0 +1,79 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+#boat-booked-details {
+    padding: 20px;
+    max-width: 1200px;
+    margin-bottom:200px;
+}
+
+h1 {
+    text-align: center;
+    color: #0e0e0e;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.boat-booked-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.boat-booked-table th, .boat-booked-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background: linear-gradient(135deg, #ffffff, #a9a9aa);
+}
+
+.boat-booked-table th {
+    background-color: #f4f4f9;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.boat-booked-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.boat-booked-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.navigation-buttons .nav-button {
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    color: #000;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navigation-buttons .nav-button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+.cross67 {
+    margin-left: 180%;
+    cursor: pointer;
+    font-size: 25px;
+    color: #000000;
+  }
