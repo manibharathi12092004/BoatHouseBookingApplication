@@ -21,25 +21,16 @@ const SignIn = () => {
 
     try {
       const response = await axios.get('http://localhost:3001/users');
-      const adminResponse = await axios.get('http://localhost:3001/admins');
-
       const users = response.data;
-      const admin = adminResponse.data;
 
-      if (email === admin.email && password === admin.password) {
-        dispatch(sign_In(email, 'admin-token'));
-        alert('Admin Sign In Successful!');
-        navigate('/admin');
+      const user = users.find(u => u.email === email && u.password === password);
+
+      if (user) {
+        dispatch(sign_In(email, 'dummy-token'));
+        alert('Sign In Successful!');
+        navigate('/');
       } else {
-        const user = users.find(u => u.email === email && u.password === password);
-
-        if (user) {
-          dispatch(sign_In(email, 'dummy-token'));
-          alert('Sign In Successful!');
-          navigate('/');
-        } else {
-          alert('Invalid email or password');
-        }
+        alert('Invalid email or password');
       }
     } catch (error) {
       console.error('There was an error!', error);

@@ -5,7 +5,7 @@ import SignIn from './components/Sign In/SignIn';
 import SignUp from './components/Sign Up/SignUp';
 import AdminLogin from './components/AdminLogin/adminLogin';
 import AdminPage from './components/Admin/AdminPage';
-
+import Profile from './components/Profile1/Profile';
 const App = () => {
   return (
     <Router>
@@ -15,6 +15,7 @@ const App = () => {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
