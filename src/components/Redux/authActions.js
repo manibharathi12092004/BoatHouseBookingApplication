@@ -1,18 +1,30 @@
 export const SIGN_IN = 'SIGN_IN';
 export const SIGN_OUT = 'SIGN_OUT';
 export const SIGN_UP = 'SIGN_UP';
+export const FETCH_PROFILE = 'FETCH_PROFILE';
+export const SET_PROFILE = 'SET_PROFILE';
 
 // Action Creators
-export const sign_In = (email, token) => ({
+export const signIn = (email, token) => ({
   type: SIGN_IN,
   payload: { email, token },
 });
 
-export const sign_Out = () => ({
+export const signOut = () => ({
   type: SIGN_OUT,
 });
 
-export const sign_Up = (email, token) => ({
+export const signUp = (email, token) => ({
   type: SIGN_UP,
   payload: { email, token },
+});
+
+export const fetchProfile = (profile) => ({
+  type: FETCH_PROFILE,
+  payload: profile,
+});
+
+export const setProfile = (profile) => ({
+  type: SET_PROFILE,
+  payload: profile,
 });

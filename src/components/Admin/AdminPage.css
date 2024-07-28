@@ -71,3 +71,9 @@ body {
 .delete-icon:hover {
     color: #a71d2a;
 }
+#aa1 .cross6{
+    margin-left:180%;
+    cursor: pointer;
+    font-size: 25px;
+    color: #000000;
+}

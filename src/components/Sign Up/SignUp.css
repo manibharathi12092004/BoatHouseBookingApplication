@@ -1,15 +1,35 @@
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:cursive ;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f9;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-#h11 {
-  width: 120%;
+.signup-container {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.cross {
+  font-size: 25px;
+  color: #000000;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin-left:890px;
+  margin-top:50px;
+  cursor: pointer;
+}
+
+.signup-box {
+  width: 140%;
   max-width: 400px;
   padding: 20px;
   border: 1px solid #ddd;
@@ -19,25 +39,27 @@ body {
   text-align: center;
 }
 
-#h11 h1 {
+.signup-box h1 {
   margin-bottom: 20px;
   color: #050505;
   font-size: 33px;
 }
 
-#h12, #h13, #h14 {
+.form-group {
   margin-bottom: 15px;
   text-align: left;
 }
 
-#h11 label {
+.form-group label {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
   color: #665f5f;
 }
 
-#h11 input[type="text"], #h11 input[type="email"], #h11 input[type="password"] {
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -46,8 +68,8 @@ body {
   background-color: #f9f9f9;
 }
 
-#h11 button[type="submit"] {
-  font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
+.register-button {
+  
   width: 100%;
   padding: 10px;
   background-color: #c804e1;
@@ -57,17 +79,10 @@ body {
   cursor: pointer;
   font-size: 16px;
   margin-top: 10px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-#h11 button[type="submit"]:hover {
+.register-button:hover {
   background-color: #000000;
-}
-
-.cross {
-  position: absolute;
-  top: 75px;
-  right: 455px;
-  cursor: pointer;
-  font-size: 25px;
-  color: #000000;
+  transform: scale(1.05);
 }

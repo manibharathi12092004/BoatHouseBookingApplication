@@ -6,6 +6,9 @@ import SignUp from './components/Sign Up/SignUp';
 import AdminLogin from './components/AdminLogin/adminLogin';
 import AdminPage from './components/Admin/AdminPage';
 import Profile from './components/Profile1/Profile';
+import SetupProfile from './components/SetUpProfile/SetupProfile';
+import BoatDetail from './components/BoatDetails/BoatDetail';
+
 const App = () => {
   return (
     <Router>
@@ -16,6 +19,8 @@ const App = () => {
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/setup-profile" element={<SetupProfile />} />
+        <Route path="/boat/:id" element={<BoatDetail />} />
       </Routes>
     </Router>
   );

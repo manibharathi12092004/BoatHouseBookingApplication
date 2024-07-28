@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import './SignIn.css';
 import { Link } from 'react-router-dom';
-import { sign_In } from '../Redux/authActions';
+import './SignIn.css';
+import { signIn } from '../Redux/authActions';  // Updated import statement
 import { GiCrossMark } from "react-icons/gi";
 
 const SignIn = () => {
@@ -26,7 +26,7 @@ const SignIn = () => {
       const user = users.find(u => u.email === email && u.password === password);
 
       if (user) {
-        dispatch(sign_In(email, 'dummy-token'));
+        dispatch(signIn(email, 'dummy-token'));  // Updated function call
         alert('Sign In Successful!');
         navigate('/');
       } else {

@@ -1,9 +1,10 @@
-import { SIGN_IN, SIGN_OUT, SIGN_UP } from './authActions';
+import { SIGN_IN, SIGN_OUT, SIGN_UP, SET_PROFILE } from './authActions';
 
 const initialState = {
   isAuthenticated: false,
   email: null,
   token: null,
+  profile: null,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -22,6 +23,12 @@ const authReducer = (state = initialState, action) => {
         isAuthenticated: false,
         email: null,
         token: null,
+        profile: null,
+      };
+    case SET_PROFILE:
+      return {
+        ...state,
+        profile: action.payload,
       };
     default:
       return state;

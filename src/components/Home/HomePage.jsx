@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { sign_Out } from '../Redux/authActions';
+import { signOut } from '../Redux/authActions';
 import './HomePage.css';
+import BoatShowcase from '../BoatShowCase/BoatShowcase';
 
 const HomePage = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -11,7 +12,7 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   const handleSignOut = () => {
-    dispatch(sign_Out());
+    dispatch(signOut());
     alert('You have signed out successfully!');
     navigate('/');
   };
@@ -36,18 +37,16 @@ const HomePage = () => {
             )}
           </div>
         ) : (
-          <>
-            <Link to='/sign-in'>
-              <button className="nav-button">Sign In</button>
-            </Link>
-          </>
+          <Link to='/sign-in'>
+            <button className="nav-button">Sign In</button>
+          </Link>
         )}
         <Link to='/admin-login'>
           <button className="nav-button">Admin</button>
         </Link>
       </nav>
-      <div id="home-content">
-        <h1>Home</h1>
+      <div>
+        <BoatShowcase />
       </div>
     </div>
   );

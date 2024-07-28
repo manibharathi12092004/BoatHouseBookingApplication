@@ -1,0 +1,66 @@
+.setup-profile-container {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 100%;
+  max-width: 600px;
+  margin:auto;
+  margin-top:33px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f0f2f5, #80bee5);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 30px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  text-align: center;
+}
+
+.setup-profile-container h1 {
+  margin-bottom: 20px;
+  color: #050505;
+  font-size: 33px;
+}
+
+.setup-profile-form {
+  text-align: left;
+}
+
+.setup-profile-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #665f5f;
+}
+
+.setup-profile-form input[type="text"], .setup-profile-form input[type="email"], .setup-profile-form input[type="tel"], .setup-profile-form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+}
+
+.submit-button {
+  font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
+  width: 100%;
+  padding: 10px;
+  background-color: #c804e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #000000;
+}
+
+.cross3 {
+  position: absolute;
+  top: 10px;
+  right: 455px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #000000;
+}

@@ -37,7 +37,7 @@ const AdminLogin = () => {
   return (
     <div>
       <Link to="/">
-        <GiCrossMark className="cross1" />
+        <GiCrossMark className="cross5" />
       </Link>
     <div id="admin-login">
       <h1>Admin Login</h1>

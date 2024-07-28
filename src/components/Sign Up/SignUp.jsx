@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './SignUp.css';
-import { sign_Up } from '../Redux/authActions'; 
+import { signUp } from '../Redux/authActions';  // Updated import statement
 import { GiCrossMark } from "react-icons/gi";
 
 const SignUp = () => {
@@ -19,7 +19,7 @@ const SignUp = () => {
 
     try {
       await axios.post('http://localhost:3001/users', { name, email, password });
-      dispatch(sign_Up(email, 'dummy-token'));
+      dispatch(signUp(email, 'dummy-token'));  // Updated function call
       alert('Sign Up Successful!');
       navigate('/sign-in');
     } catch (error) {
@@ -29,14 +29,14 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div className="signup-container">
       <Link to="/">
         <GiCrossMark className="cross" />
       </Link>
-      <div id="h11">
+      <div className="signup-box">
         <h1>Sign Up</h1>
         <form onSubmit={handleSubmit}>
-          <div id="h14">
+          <div className="form-group">
             <label>Name:</label>
             <input
               type="text"
@@ -45,7 +45,7 @@ const SignUp = () => {
               required
             />
           </div>
-          <div id="h12">
+          <div className="form-group">
             <label>Email:</label>
             <input
               type="email"
@@ -54,7 +54,7 @@ const SignUp = () => {
               required
             />
           </div>
-          <div id="h13">
+          <div className="form-group">
             <label>Password:</label>
             <input
               type="password"
@@ -63,7 +63,7 @@ const SignUp = () => {
               required
             />
           </div>
-          <button type="submit">Register</button>
+          <button type="submit" className="register-button">Register</button>
         </form>
       </div>
     </div>

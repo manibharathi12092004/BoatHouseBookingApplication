@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai';
 import './AdminPage.css';
-
+import { GiCrossMark } from "react-icons/gi";
 const AdminPage = () => {
   const [users, setUsers] = useState([]);
 
@@ -30,6 +30,11 @@ const AdminPage = () => {
   };
 
   return (
+  <div id="aa1">
+
+       <Link to="/">
+        <GiCrossMark className="cross6" />
+      </Link>
     <div id="admin">
       <h1>Admin Page</h1>
       <table className="admin-table">
@@ -52,13 +57,14 @@ const AdminPage = () => {
                 <AiFillDelete 
                   onClick={() => handleDelete(user.id)} 
                   className="delete-icon" 
-                />
+                  />
               </td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
+    </div>  
   );
 };
 
