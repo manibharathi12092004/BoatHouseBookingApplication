@@ -35,7 +35,7 @@ const Bookingform = () => {
         axios.post('http://localhost:3001/bookings', bookingDetails)
             .then(response => {
                 console.log("Booking details:", response.data);
-                alert('Booking confirmed!');
+                alert('Booking confirmed.Payment details will be send through Email or Whatsapp');
                 return axios.post('http://localhost:3001/boats', { id: boat.id, name: boat.name, price: boat.price, location: boat.location, capacity: boat.capacity });
             })
             .then(boatResponse => {
