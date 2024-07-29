@@ -16,65 +16,29 @@
   ],
   "boats": [
     {
-      "id": 2,
-      "name": "Ocean Explorer",
-      "price": "45000/day",
-      "location": "Key West",
-      "capacity": 8
-    },
-    {
-      "id": 8,
+      "id": "1",
       "name": "Sea Breeze",
-      "price": "37000/day",
-      "location": "Palm Beach",
+      "price": "30000/day",
+      "location": "Miami",
       "capacity": 6
-    },
-    {
-      "id": 9,
-      "name": "Marine Dream",
-      "price": "32000/day",
-      "location": "Miami Beach",
-      "capacity": 14
     }
   ],
   "bookings": [
     {
-      "id": "32a1",
+      "id": "fa02",
       "name": "Mani",
       "email": "manibharathi120904@gmail.com",
-      "age": "25",
-      "date": "2024-07-31",
-      "persons": "3",
-      "rooms": "1",
-      "food": "veg",
-      "days": "3"
-    },
-    {
-      "id": "f3e3",
-      "name": "Abi",
-      "email": "abii123@gmail.com",
-      "age": "22",
-      "date": "2024-08-10",
-      "persons": "7",
-      "rooms": "5",
-      "food": "non-veg",
-      "days": "3"
-    },
-    {
-      "id": "250d",
-      "name": "Dev",
-      "email": "dev1@gmail.com",
-      "age": "22",
-      "date": "2024-08-10",
+      "age": "20",
+      "date": "2024-08-03",
       "persons": "5",
-      "rooms": "2",
+      "rooms": "1",
       "food": "non-veg",
-      "days": "3"
+      "days": "4"
     }
   ],
   "boatData": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Sea Breeze",
       "description": "A beautiful sailboat perfect for weekend trips.",
       "image": "/img/sea_breeze.jpg",
@@ -94,7 +58,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Ocean Explorer",
       "description": "Perfect for an adventurous trip on the sea.",
       "image": "/img/b20.jpg",
@@ -115,7 +79,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Sunset Cruiser",
       "description": "Ideal for a romantic sunset cruise.",
       "image": "/img/b30.jpg",
@@ -136,7 +100,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Luxury Voyager",
       "description": "Experience luxury on the waters.",
       "image": "/img/b40.jpg",
@@ -157,7 +121,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Adventure Seeker",
       "description": "Great for family adventures on the sea.",
       "image": "/img/b50.jpg",
@@ -178,7 +142,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Island Hopper",
       "description": "Hop between islands in style.",
       "image": "/img/b60.jpg",
@@ -199,7 +163,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Wave Rider",
       "description": "Perfect for thrill-seekers.",
       "image": "/img/b70.jpg",
@@ -219,7 +183,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Sea Breeze",
       "description": "Relax and enjoy the sea breeze.",
       "image": "/img/b80.jpg",
@@ -240,7 +204,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Marine Dream",
       "description": "Your dream getaway on the water.",
       "image": "/img/1 bed.jpg",
@@ -261,7 +225,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Lagoon Cruiser",
       "description": "Explore the lagoon in comfort.",
       "image": "/img/b20.jpg",
@@ -282,7 +246,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Coastal Voyager",
       "description": "Voyage along the beautiful coastline.",
       "image": "/img/bed30.jpg",
@@ -303,7 +267,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Harbor Explorer",
       "description": "Explore the harbor with ease.",
       "image": "/img/bed40.jpg",

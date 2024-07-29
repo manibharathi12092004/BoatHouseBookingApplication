@@ -7,7 +7,7 @@
 #user-booked-details {
     padding: 20px;
     max-width: 1200px;
-    margin-bottom:250px;
+    margin-bottom:100px;
 }
 
 h1 {
@@ -68,6 +68,9 @@ h1 {
 .navigation-buttons .nav-button:hover {
     background-color: #e0e0e0;
     transform: scale(1.05);
+}
+#cc1{
+    margin-top: 40px;
 }
 .cross66 {
     margin-left: 125%;

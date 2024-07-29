@@ -1,18 +1,16 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 #h1 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  width: 120%;
+  margin-top: 180px;
+  width: 130%;
   max-width: 500px;
-  padding: 20px;
+  padding: 30px;
   border: 1px solid #ddd;
   border-radius: 12px;
   background: #ffffff;
@@ -82,8 +80,6 @@ body {
 .cross {
   top: 20px;
   right: 20px;
-  margin-left:920px;
-  margin-top:50px;
   cursor: pointer;
   font-size: 25px;
   color: #000000;

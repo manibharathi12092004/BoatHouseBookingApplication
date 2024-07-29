@@ -19,7 +19,7 @@ const Bookingform = () => {
     const getCurrentDate = () => {
         const today = new Date();
         const yyyy = today.getFullYear();
-        const mm = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed.
+        const mm = String(today.getMonth() + 1).padStart(2, '0'); 
         const dd = String(today.getDate()).padStart(2, '0');
         return `${yyyy}-${mm}-${dd}`;
     };
@@ -36,13 +36,11 @@ const Bookingform = () => {
             .then(response => {
                 console.log("Booking details:", response.data);
                 alert('Booking confirmed!');
-
-                // Also store the boat details separately
                 return axios.post('http://localhost:3001/boats', { id: boat.id, name: boat.name, price: boat.price, location: boat.location, capacity: boat.capacity });
             })
             .then(boatResponse => {
                 console.log("Boat details stored:", boatResponse.data);
-                navigate('/'); // Redirect to home or any other page after booking
+                navigate('/');
             })
             .catch(error => {
                 console.error('Error:', error);

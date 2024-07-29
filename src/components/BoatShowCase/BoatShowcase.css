@@ -1,73 +1,110 @@
+
 .boat-showcase-container {
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.347); /* Light blue background */
+    background-color: rgba(255, 255, 255, 0.347);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 760px;
-    
-}
-
-.boat-showcase-container h1 {
+    width: 100%;
+  }
+  
+  .boat-showcase-container h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #00796b; /* Teal color for the heading */
-}
-
-.search-container {
+    color: #00796b;
+  }
+  
+  .search-container {
     text-align: center;
     margin-bottom: 20px;
-}
-
-.search-input {
+    top: 80px;
+    background-color: rgba(255, 255, 255, 0.347); 
+    z-index: 1;
+    padding: 10px 0; 
+  }
+  
+  .search-input {
     padding: 10px;
-    border: 1px solid #00796b; /* Teal border */
+    border: 1px solid #00796b;
     border-radius: 4px;
     width: 300px;
-    box-sizing: border-box; /* Ensures padding and border are included in width */
-}
-
-.boat-grid {
+    box-sizing: border-box;
+  }
+  
+  .boat-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-}
-
-.boat-card {
-    background-color: #ffffff;
-    border: 1px solid #00796b; /* Teal border */
+  }
+  
+  .boat-card {
+    background-color: #efeded;
+    border: 1px solid #00796b;
     border-radius: 8px;
     padding: 20px;
     width: 300px;
-    height: 400px; /* Fixed height for consistency */
+    height: 400px;
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease-in-out;
-    box-sizing: border-box; /* Ensures padding and border are included in width and height */
-}
-
-.boat-card:hover {
+    box-sizing: border-box;
+  }
+  
+  .boat-card:hover {
     transform: translateY(-10px);
-}
-
-.boat-image {
+  }
+  
+  .boat-image {
     width: 100%;
-    height: 200px; /* Fixed height for consistency */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
-}
-
-.boat-card h2 {
+  }
+  
+  .boat-card h2 {
     margin: 10px 0;
-    color: #00796b; /* Teal color for boat names */
-}
-
-.boat-card p {
+    color: #00796b;
+  }
+  
+  .boat-card p {
     color: #333;
-}
-
-.boat-price {
+  }
+  
+  .boat-price {
     font-size: 18px;
     font-weight: bold;
-    color: #d32f2f; /* Red color for the price */
-}
-
+    color: #d32f2f;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+  }
+  
+  .dropdown-item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1;
+  }
+  

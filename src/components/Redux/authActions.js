@@ -4,7 +4,6 @@ export const SIGN_UP = 'SIGN_UP';
 export const FETCH_PROFILE = 'FETCH_PROFILE';
 export const SET_PROFILE = 'SET_PROFILE';
 
-// Action Creators
 export const signIn = (email, token) => ({
   type: SIGN_IN,
   payload: { email, token },

@@ -21,9 +21,11 @@ const BoatBookedDetails = () => {
 
   return (
     <div>
+      <div className="cc2">
         <Link to="/admin">
         <GiCrossMark className="cross67" />
       </Link>
+      </div>  
     <div id="boat-booked-details">
       <h1>Boat Booked Details</h1>
       <table className="boat-booked-table">

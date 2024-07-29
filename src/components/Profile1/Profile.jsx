@@ -12,9 +12,12 @@ const Profile = () => {
       <Link to="/">
         <GiCrossMark className="cross4" />
       </Link>
-      <h1>Your Profile</h1>
       {profile ? (
         <div className="profile-details">
+          <h1>Your Profile</h1>
+          <div className="usser-container">
+            <img src="/img/user2.jpg" alt="User Icon" className="usser" />
+          </div>
           <p><strong>Name:</strong> {profile.name}</p>
           <p><strong>Email:</strong> {profile.email}</p>
           <p><strong>Phone:</strong> {profile.phone}</p>
@@ -25,7 +28,8 @@ const Profile = () => {
           </Link>
         </div>
       ) : (
-        <div>
+        <div className="profile-container2">
+          <h1>Your Profile</h1>
           <p>No profile found. Please set up your profile.</p>
           <Link to="/setup-profile">
             <button className="edit-button">Profile Set Up</button>

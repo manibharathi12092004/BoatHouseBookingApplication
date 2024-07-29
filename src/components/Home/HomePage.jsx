@@ -34,8 +34,9 @@ const HomePage = () => {
           {auth.isAuthenticated ? (
             <div className="dropdown">
               <button className="nav-button" onClick={toggleDropdown}>
-                Profile
+                <img src="/img/user.png" alt="User Icon" />
               </button>
+
               {showDropdown && (
                 <div className="dropdown-content">
                   <Link to='/profile' className="dropdown-item">Profile</Link>

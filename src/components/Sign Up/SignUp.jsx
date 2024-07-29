@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './SignUp.css';
-import { signUp } from '../Redux/authActions';  // Updated import statement
+import { signUp } from '../Redux/authActions';
 import { GiCrossMark } from "react-icons/gi";
 
 const SignUp = () => {
@@ -19,7 +19,7 @@ const SignUp = () => {
 
     try {
       await axios.post('http://localhost:3001/users', { name, email, password });
-      dispatch(signUp(email, 'dummy-token'));  // Updated function call
+      dispatch(signUp(email, 'dummy-token'));
       alert('Sign Up Successful!');
       navigate('/sign-in');
     } catch (error) {

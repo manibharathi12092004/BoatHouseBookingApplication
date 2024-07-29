@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './SignIn.css';
-import { signIn } from '../Redux/authActions';  // Updated import statement
+import { signIn } from '../Redux/authActions';
 import { GiCrossMark } from "react-icons/gi";
 
 const SignIn = () => {

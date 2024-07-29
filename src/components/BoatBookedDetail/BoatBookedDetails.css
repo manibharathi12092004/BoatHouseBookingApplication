@@ -1,12 +1,11 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
 }
 
 #boat-booked-details {
     padding: 20px;
+    margin-top: 70px;
     max-width: 1200px;
     margin-bottom:200px;
 }
@@ -70,6 +69,9 @@ h1 {
 .navigation-buttons .nav-button:hover {
     background-color: #e0e0e0;
     transform: scale(1.05);
+}
+.cc2{
+    margin-top: 40px;
 }
 .cross67 {
     margin-left: 180%;

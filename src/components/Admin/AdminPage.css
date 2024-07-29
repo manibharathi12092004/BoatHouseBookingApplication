@@ -1,4 +1,3 @@
-/* AdminPage.css */
 
 body {
     font-family: 'Arial', sans-serif;
@@ -9,7 +8,7 @@ body {
   #admin {
     padding: 20px;
     max-width: 900px;
-    margin-bottom:150px;
+    margin-top: 50px;
   }
   
   h1 {
@@ -97,10 +96,11 @@ body {
     background-color: #9c9c9c;
     transform: scale(1.05);
   }
-  
+  #aa1{
+    margin-top: 30px;
+  }
   #aa1 .cross6 {
     margin-left: 170%;
-    margin-top: -240%;
     cursor: pointer;
     font-size: 25px;
     color: #000000;
