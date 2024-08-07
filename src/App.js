@@ -1,6 +1,5 @@
-// App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import HomePage from './components/Home/HomePage';
 import SignIn from './components/Sign In/SignIn';
 import SignUp from './components/Sign Up/SignUp';
@@ -14,6 +13,8 @@ import UserBookedDetails from './components/UserBookedDetail/UserBookedDetails';
 import BoatBookedDetails from './components/BoatBookedDetail/BoatBookedDetails';
 
 const App = () => {
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
+  
   return (
     <Router>
       <Routes>
@@ -21,7 +22,10 @@ const App = () => {
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/admin-login" element={<AdminLogin />} />
-        <Route path="/admin" element={<AdminPage />} />
+        <Route
+          path="/admin"
+          element={isAdmin ? <AdminPage /> : <Navigate to="/admin-login" />}
+        />
         <Route path="/profile" element={<Profile />} />
         <Route path="/setup-profile" element={<SetupProfile />} />
         <Route path="/boat/:id" element={<BoatDetail />} />

@@ -1,15 +1,20 @@
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AiFillDelete } from 'react-icons/ai';
 import { GiCrossMark } from 'react-icons/gi';
 import './AdminPage.css';
 
 const AdminPage = () => {
   const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
+    const isAdmin = localStorage.getItem('isAdmin') === 'true';
+    if (!isAdmin) {
+      navigate('/admin-login');
+    }
+
     const fetchUsers = async () => {
       try {
         const response = await axios.get('http://localhost:3001/users');
@@ -20,7 +25,7 @@ const AdminPage = () => {
     };
 
     fetchUsers();
-  }, []);
+  }, [navigate]);
 
   const handleDelete = async (id) => {
     try {
@@ -31,9 +36,14 @@ const AdminPage = () => {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('isAdmin');
+    navigate('/admin-login');
+  };
+
   return (
     <div id="aa1">
-      <Link to="/">
+      <Link to="/" onClick={handleLogout}>
         <GiCrossMark className="cross6" />
       </Link>
       <div id="admin">

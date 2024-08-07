@@ -27,7 +27,7 @@ const HomePage = () => {
         <div className="left">
           <div className="logo">
             <img src="/img/logoIcon.jpg" alt="Bo Book Logo" className="logo-img" />
-            <span className="logo-name">Bo Book</span>
+            <span className="logo-name">BoBook</span>
           </div>
         </div>
         <div className="right">

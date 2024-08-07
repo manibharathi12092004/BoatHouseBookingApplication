@@ -24,9 +24,9 @@ const AdminLogin = () => {
       if (admin) {
         localStorage.setItem('isAdmin', 'true');
         alert('Admin Login Successful!');
-        navigate('/admin');
+        navigate('/');
       } else {
-        alert('Invalid email or password');
+        setErrorMessage('Invalid email or password');
       }
     } catch (error) {
       console.error('There was an error!', error);
@@ -39,32 +39,32 @@ const AdminLogin = () => {
       <Link to="/">
         <GiCrossMark className="cross5" />
       </Link>
-    <div id="admin-login">
-      <h1>Admin Login</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-      </form>
+      <div id="admin-login">
+        <h1>Admin Login</h1>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Email:</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">Login</button>
+          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+        </form>
+      </div>
     </div>
-  </div>  
   );
 };
 

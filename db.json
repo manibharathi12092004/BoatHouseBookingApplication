@@ -10,30 +10,32 @@
   "admins": [
     {
       "id": "1",
-      "email": "adminmani123@gmail.com",
-      "password": "ManiOwner@0507"
+      "email": "mani123@gmail.com",
+      "password": "mani"
     }
   ],
   "boats": [
     {
-      "id": "1",
-      "name": "Sea Breeze",
-      "price": "30000/day",
-      "location": "Miami",
-      "capacity": 6
+      "id": "3",
+      "name": "Sunset Cruiser",
+      "price": "38000/day",
+      "location": "Fort Lauderdale",
+      "userEmail": "manibharathi120904@gmail.com"
     }
   ],
   "bookings": [
     {
-      "id": "fa02",
-      "name": "Mani",
+      "id": "f82e",
+      "name": "mani",
       "email": "manibharathi120904@gmail.com",
-      "age": "20",
-      "date": "2024-08-03",
+      "age": "22",
+      "date": "2024-08-08",
       "persons": "5",
-      "rooms": "1",
+      "rooms": "2",
       "food": "non-veg",
-      "days": "4"
+      "days": "1",
+      "boatId": "3",
+      "boatName": "Sunset Cruiser"
     }
   ],
   "boatData": [

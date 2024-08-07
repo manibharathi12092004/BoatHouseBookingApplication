@@ -28,15 +28,34 @@ const Bookingform = () => {
         return <div>Loading...</div>;
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        const bookingDetails = { name, email, age, date, persons, rooms, food, days };
+        const bookingDetails = { 
+            name, 
+            email, 
+            age, 
+            date, 
+            persons, 
+            rooms, 
+            food, 
+            days, 
+            boatId: boat.id,
+            boatName: boat.name 
+        };
+        const boatDetails = { 
+            id: boat.id,
+            name: boat.name,
+            price: boat.price,
+            location: boat.location, 
+            userEmail: email
+        };
+
 
         axios.post('http://localhost:3001/bookings', bookingDetails)
             .then(response => {
                 console.log("Booking details:", response.data);
                 alert('Booking confirmed.Payment details will be send through Email or Whatsapp');
-                return axios.post('http://localhost:3001/boats', { id: boat.id, name: boat.name, price: boat.price, location: boat.location, capacity: boat.capacity });
+                return axios.post('http://localhost:3001/boats', boatDetails);
             })
             .then(boatResponse => {
                 console.log("Boat details stored:", boatResponse.data);

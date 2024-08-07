@@ -26,7 +26,7 @@ const SignIn = () => {
       const user = users.find(u => u.email === email && u.password === password);
 
       if (user) {
-        dispatch(signIn(email, 'dummy-token'));  // Updated function call
+        dispatch(signIn(email, 'dummy-token')); 
         alert('Sign In Successful!');
         navigate('/');
       } else {
