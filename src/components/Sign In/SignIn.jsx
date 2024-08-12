@@ -20,7 +20,7 @@ const SignIn = () => {
     setErrorMessage('');
 
     try {
-      const response = await axios.get('http://localhost:3001/users');
+      const response = await axios.get('http://localhost:8000/users');
       const users = response.data;
 
       const user = users.find(u => u.email === email && u.password === password);

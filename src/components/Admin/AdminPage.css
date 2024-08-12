@@ -117,3 +117,96 @@ body {
     font-size: 25px;
     color: #000000;
 }
+
+/* Existing styles remain unchanged */
+
+/* CRUD Section for Boat Data */
+.crud-section {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.crud-section h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.crud-section input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.crud-section button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.crud-section button:hover {
+  background-color: #000000;
+}
+
+/* Existing styles remain unchanged */
+
+/* Boat List */
+.boat-list1 {
+  margin-top: 40px;
+}
+
+.boat-cards1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.boat-card1 {
+  flex: 1 1 calc(25% - 20px); 
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f4f4f9;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 30px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.boat-card1 h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.boat-card1 p {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #666;
+}
+
+.boat-card1 button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.boat-card1 button:hover{
+  background-color: #000000;
+  color: #fff;
+}

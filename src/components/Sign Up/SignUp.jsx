@@ -18,7 +18,7 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:3001/users', { name, email, password });
+      await axios.post('http://localhost:8000/users', { name, email, password });
       dispatch(signUp(email, 'dummy-token'));
       alert('Sign Up Successful!');
       navigate('/sign-in');

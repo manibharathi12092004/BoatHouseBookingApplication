@@ -7,6 +7,19 @@ import './AdminPage.css';
 
 const AdminPage = () => {
   const [users, setUsers] = useState([]);
+  const [boatData, setBoatData] = useState([]);
+  const [newBoat, setNewBoat] = useState({
+    name: '',
+    description: '',
+    image: '',
+    price: '',
+    location: '',
+    type: '',
+    capacity: '',
+    features: '',
+    extraImages: ''
+  });
+  const [editingBoat, setEditingBoat] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,7 +37,17 @@ const AdminPage = () => {
       }
     };
 
+    const fetchBoatData = async () => {
+      try {
+        const response = await axios.get('http://localhost:3001/boatData');
+        setBoatData(response.data);
+      } catch (error) {
+        console.error('Error fetching boat data:', error);
+      }
+    };
+
     fetchUsers();
+    fetchBoatData();
   }, [navigate]);
 
   const handleDelete = async (id) => {
@@ -36,9 +59,90 @@ const AdminPage = () => {
     }
   };
 
+  const handleBoatDelete = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3001/boatData/${id}`);
+      setBoatData(boatData.filter(boat => boat.id !== id));
+    } catch (error) {
+      console.error('Error deleting boat:', error);
+    }
+  };
+
   const handleLogout = () => {
     localStorage.removeItem('isAdmin');
     navigate('/admin-login');
+  };
+
+  const handleInputChange = (e) => {
+    setNewBoat({ ...newBoat, [e.target.name]: e.target.value });
+  };
+
+  const addBoat = () => {
+    const boatToAdd = {
+      ...newBoat,
+      features: newBoat.features.split(',').map(f => f.trim()),
+      extraImages: newBoat.extraImages.split(',').map(img => img.trim())
+    };
+
+    axios.post('http://localhost:3001/boatData', boatToAdd)
+      .then(response => {
+        setBoatData([...boatData, response.data]);
+        setNewBoat({
+          name: '',
+          description: '',
+          image: '',
+          price: '',
+          location: '',
+          type: '',
+          capacity: '',
+          features: '',
+          extraImages: ''
+        });
+      })
+      .catch(error => console.error('Error adding boat:', error));
+  };
+
+  const editBoat = (id) => {
+    const boatToEdit = boatData.find(boat => boat.id === id);
+    setEditingBoat(boatToEdit);
+    setNewBoat({
+      name: boatToEdit.name,
+      description: boatToEdit.description,
+      image: boatToEdit.image,
+      price: boatToEdit.price,
+      location: boatToEdit.location,
+      type: boatToEdit.type,
+      capacity: boatToEdit.capacity,
+      features: boatToEdit.features.join(', '),
+      extraImages: boatToEdit.extraImages.join(', ')
+    });
+  };
+
+  const updateBoat = () => {
+    const updatedBoat = {
+      ...editingBoat,
+      ...newBoat,
+      features: newBoat.features.split(',').map(f => f.trim()),
+      extraImages: newBoat.extraImages.split(',').map(img => img.trim())
+    };
+
+    axios.put(`http://localhost:3001/boatData/${editingBoat.id}`, updatedBoat)
+      .then(response => {
+        setBoatData(boatData.map(boat => (boat.id === editingBoat.id ? response.data : boat)));
+        setEditingBoat(null);
+        setNewBoat({
+          name: '',
+          description: '',
+          image: '',
+          price: '',
+          location: '',
+          type: '',
+          capacity: '',
+          features: '',
+          extraImages: ''
+        });
+      })
+      .catch(error => console.error('Error updating boat:', error));
   };
 
   return (
@@ -72,6 +176,7 @@ const AdminPage = () => {
             ))}
           </tbody>
         </table>
+
         <div className="admin-buttons">
           <Link to="/user-booked-details">
             <button className="nav-button">User Booked Details</button>
@@ -80,6 +185,42 @@ const AdminPage = () => {
             <button className="nav-button">Boat Booked Details</button>
           </Link>
         </div>
+
+        {/* List of Boats */}
+        <div className="boat-list1">
+          <h1>Boat Data</h1>
+          <div className="boat-cards1">
+            {boatData.map(boat => (
+              <div key={boat.id} className="boat-card1">
+                <h4>{boat.name}</h4>
+                <p>{boat.description}</p>
+                <button onClick={() => editBoat(boat.id)}>Edit</button>
+                <AiFillDelete onClick={() => handleBoatDelete(boat.id)} className="delete-icon" />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CRUD Operations for Boat Data */}
+        <div className="crud-section">
+          <h3>{editingBoat ? 'Edit Boat' : 'Add New Boat'}</h3>
+          <input type="text" name="name" placeholder="Name" value={newBoat.name} onChange={handleInputChange} />
+          <input type="text" name="description" placeholder="Description" value={newBoat.description} onChange={handleInputChange} />
+          <input type="text" name="image" placeholder="Image URL" value={newBoat.image} onChange={handleInputChange} />
+          <input type="text" name="price" placeholder="Price" value={newBoat.price} onChange={handleInputChange} />
+          <input type="text" name="location" placeholder="Location" value={newBoat.location} onChange={handleInputChange} />
+          <input type="text" name="type" placeholder="Type" value={newBoat.type} onChange={handleInputChange} />
+          <input type="number" name="capacity" placeholder="Capacity" value={newBoat.capacity} onChange={handleInputChange} />
+          <input type="text" name="features" placeholder="Features (comma separated)" value={newBoat.features} onChange={handleInputChange} />
+          <input type="text" name="extraImages" placeholder="Extra Images URLs (comma separated)" value={newBoat.extraImages} onChange={handleInputChange} />
+
+          <button onClick={editingBoat ? updateBoat : addBoat}>
+            {editingBoat ? 'Update Boat' : 'Add Boat'}
+          </button>
+          
+          {editingBoat && <button onClick={() => setEditingBoat(null)}>Cancel Edit</button>}
+        </div>
+
       </div>
     </div>
   );
