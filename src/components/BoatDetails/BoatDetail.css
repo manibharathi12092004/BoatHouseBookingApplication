@@ -1,7 +1,6 @@
 
 .boat-detail-container {
     padding: 20px;
-    background-color: rgba(251, 248, 248, 0.347); 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -91,7 +90,7 @@
 .cross8{
     right: 20px;
     margin-left:1220px;
-    margin-right: -180px;
+    margin-right: -215px;
     margin-top:10px;
     cursor: pointer;
     font-size: 25px;

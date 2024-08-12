@@ -18,15 +18,13 @@ body {
   margin-top: 180px;
 }
 
-.cross {
+.cross12 {
+  position: fixed;
+  top: 20px; 
+  right: 20px;
+  cursor: pointer;
   font-size: 25px;
   color: #000000;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  margin-left:1100px;
-  margin-top:50px;
-  cursor: pointer;
 }
 
 .signup-box {

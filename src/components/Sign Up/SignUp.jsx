@@ -31,7 +31,7 @@ const SignUp = () => {
   return (
     <div className="signup-container">
       <Link to="/">
-        <GiCrossMark className="cross" />
+        <GiCrossMark className="cross12" />
       </Link>
       <div className="signup-box">
         <h1>Sign Up</h1>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/Home/HomePage';
 import SignIn from './components/Sign In/SignIn';
 import SignUp from './components/Sign Up/SignUp';
@@ -11,10 +11,8 @@ import BoatDetail from './components/BoatDetails/BoatDetail';
 import Bookingform from './components/BookingForm/Bookingform';
 import UserBookedDetails from './components/UserBookedDetail/UserBookedDetails';
 import BoatBookedDetails from './components/BoatBookedDetail/BoatBookedDetails';
-
+import Bookingpage from './components/BookingPage/Bookingpage';
 const App = () => {
-  const isAdmin = localStorage.getItem('isAdmin') === 'true';
-  
   return (
     <Router>
       <Routes>
@@ -24,7 +22,7 @@ const App = () => {
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route
           path="/admin"
-          element={isAdmin ? <AdminPage /> : <Navigate to="/admin-login" />}
+          element={ <AdminPage /> } 
         />
         <Route path="/profile" element={<Profile />} />
         <Route path="/setup-profile" element={<SetupProfile />} />
@@ -32,6 +30,7 @@ const App = () => {
         <Route path="/booking" element={<Bookingform />} />
         <Route path="/user-booked-details" element={<UserBookedDetails />} />
         <Route path="/boat-booked-details" element={<BoatBookedDetails />} />
+        <Route path="/userbooking" element={<Bookingpage />} />
       </Routes>
     </Router>
   );

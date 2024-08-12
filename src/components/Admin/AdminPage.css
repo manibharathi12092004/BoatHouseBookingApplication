@@ -105,12 +105,15 @@ body {
     background-color: #9c9c9c;
     transform: scale(1.05);
   }
-  #aa1{
-    margin-top: 30px;
-  }
-  #aa1 .cross6 {
-    margin-left: 168%;
+  #aa1 {
+    position: relative; 
+}
+
+#aa1 .cross6 {
+    position: fixed;
+    top: 20px; 
+    right: 20px;
     cursor: pointer;
     font-size: 25px;
     color: #000000;
-  }
+}

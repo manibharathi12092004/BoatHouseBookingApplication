@@ -1,5 +1,5 @@
 .profile-container {
-  width: 80%;
+  width: 100%;
   max-width: 600px;
   margin: auto;
   margin-top: 110px;
@@ -49,31 +49,30 @@ button:hover {
 }
 
 .cross4 {
+  position: fixed;
+  top: 20px; 
+  right: 20px;
+  cursor: pointer;
   font-size: 25px;
   color: #000000;
-  position: absolute;
-  left: 20px;
-  margin-left: 890px;
-  cursor: pointer;
 }
 
 .profile-container .cross4 {
-  margin-top: 40px;
+  position: fixed;
+  top: 20px; 
+  right: 20px;
+  cursor: pointer;
   font-size: 25px;
   color: #000000;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  margin-left: 1100px;
-  cursor: pointer;
 }
+
 
 .usser-container {
   background: linear-gradient(135deg, #f0f2f5, #a19f9f);
   padding: 20px;
   border-radius: 12px;
   display: inline-block;
-  margin-left: 150px;
+  margin-left: 200px;
 }
 .usser:hover{
   transform: scale(1.30);

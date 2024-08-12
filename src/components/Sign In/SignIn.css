@@ -77,8 +77,9 @@ body {
   background-color: #049bff;
 }
 
-.cross {
-  top: 20px;
+.cross11 {
+  position: fixed;
+  top: 20px; 
   right: 20px;
   cursor: pointer;
   font-size: 25px;

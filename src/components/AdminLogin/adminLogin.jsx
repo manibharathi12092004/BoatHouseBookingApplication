@@ -24,9 +24,9 @@ const AdminLogin = () => {
       if (admin) {
         localStorage.setItem('isAdmin', 'true');
         alert('Admin Login Successful!');
-        navigate('/');
+        navigate('/admin');
       } else {
-        setErrorMessage('Invalid email or password');
+        alert('Invalid email or password');
       }
     } catch (error) {
       console.error('There was an error!', error);

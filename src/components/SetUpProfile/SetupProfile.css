@@ -58,9 +58,9 @@
 }
 
 .cross3 {
-  position: absolute;
-  top: 20px;
-  right: 455px;
+  position: fixed;
+  top: 20px; 
+  right: 20px;
   cursor: pointer;
   font-size: 25px;
   color: #000000;

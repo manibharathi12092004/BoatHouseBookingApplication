@@ -6,6 +6,7 @@
 
 #user-booked-details {
     padding: 20px;
+    margin-top: 100px;
     max-width: 1200px;
     margin-bottom:100px;
 }
@@ -69,13 +70,10 @@ h1 {
     background-color: #e0e0e0;
     transform: scale(1.05);
 }
-#cc1{
-    margin-top: 40px;
-    
-}
 .cross66 {
-    margin-left: 110%;
-    margin-bottom: 10%;
+    position: fixed;
+    top: 20px; 
+    right: 20px;
     cursor: pointer;
     font-size: 25px;
     color: #000000;

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { signOut } from '../Redux/authActions';
+import { signOut,signIn } from '../Redux/authActions';
 import './HomePage.css';
 import BoatShowcase from '../BoatShowCase/BoatShowcase';
 
@@ -11,8 +11,18 @@ const HomePage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const token = localStorage.getItem('authToken');
+    const email = localStorage.getItem('userEmail');
+    if (token && email) {
+      dispatch(signIn(email, token));
+    }
+  }, [dispatch]);
+
   const handleSignOut = () => {
     dispatch(signOut());
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('authToken');
     alert('You have signed out successfully!');
     navigate('/');
   };
@@ -40,7 +50,8 @@ const HomePage = () => {
               {showDropdown && (
                 <div className="dropdown-content">
                   <Link to='/profile' className="dropdown-item">Profile</Link>
-                  <button className="dropdown-item" onClick={handleSignOut}>Sign Out</button>
+                  <Link to='/userbooking' className="dropdown-item">My Bookings</Link>
+                  <Link className="dropdown-item" onClick={handleSignOut}>Sign Out</Link>
                 </div>
               )}
             </div>
@@ -54,7 +65,7 @@ const HomePage = () => {
           </Link>
         </div>
       </nav>
-      <div id="torcher">
+      <div id="boatshowcase1">
         <BoatShowcase />
       </div>
     </div>

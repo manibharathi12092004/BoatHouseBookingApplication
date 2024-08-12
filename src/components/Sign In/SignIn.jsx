@@ -26,6 +26,8 @@ const SignIn = () => {
       const user = users.find(u => u.email === email && u.password === password);
 
       if (user) {
+        localStorage.setItem('userEmail', email); // Store user email in localStorage
+        localStorage.setItem('authToken', 'dummy-token'); // Store dummy token in localStorage
         dispatch(signIn(email, 'dummy-token')); 
         alert('Sign In Successful!');
         navigate('/');
@@ -41,7 +43,7 @@ const SignIn = () => {
   return (
     <div>
       <Link to="/">
-        <GiCrossMark className="cross" />
+        <GiCrossMark className="cross11" />
       </Link>
       <div id="h1">
         <div>
