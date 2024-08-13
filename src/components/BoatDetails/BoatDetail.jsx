@@ -6,7 +6,7 @@ import { GiCrossMark } from "react-icons/gi";
 import { Link } from 'react-router-dom';
 
 const BoatDetail = () => {
-    const { id } = useParams();
+    const { id } = useParams(); // id is a string
     const [boat, setBoat] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -17,14 +17,12 @@ const BoatDetail = () => {
         const fetchBoatData = async () => {
             try {
                 console.log(`Fetching data for boat with ID: ${id}`);
-                const response = await fetch(`http://localhost:3001/boatData`);
+                const response = await fetch(`http://localhost:8000/api/boatdata/${id}/`); 
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-                const data = await response.json();
-                console.log('Fetched data:', data);
-                const selectedBoat = data.find(boat => boat.id === id); // Compare id as a string
-                console.log('Selected boat:', selectedBoat);
+                const selectedBoat = await response.json();
+                console.log('Fetched boat:', selectedBoat);
                 setBoat(selectedBoat);
             } catch (error) {
                 console.error('There was a problem with the fetch operation:', error);
@@ -78,7 +76,7 @@ const BoatDetail = () => {
                 <div className="boat-detail-extra">
                     <h2>Additional Images</h2>
                     <div className="boat-images">
-                        {boat.extraImages.map((img, index) => (
+                        {boat.extra_images.map((img, index) => ( // Corrected field name
                             <img key={index} src={img} alt={`${boat.name} ${index + 1}`} className="boat-extra-image" />
                         ))}
                     </div>

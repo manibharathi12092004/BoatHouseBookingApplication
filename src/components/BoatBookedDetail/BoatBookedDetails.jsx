@@ -10,7 +10,7 @@ const BoatBookedDetails = () => {
   useEffect(() => {
     const fetchBoats = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/boats');
+        const response = await axios.get('http://localhost:8000/api/boats/');
         setBoats(response.data);
       } catch (error) {
         console.error('Error fetching boats:', error);
@@ -40,11 +40,11 @@ const BoatBookedDetails = () => {
           </thead>
           <tbody>
             {boats.map(boat => (
-              <tr key={boat.id}>
+              <tr key={boat.boat_id}>
                 <td>{boat.name}</td>
                 <td>{boat.price}</td>
                 <td>{boat.location}</td>
-                <td>{boat.userEmail || 'N/A'}</td> 
+                <td>{boat.user_email || 'N/A'}</td> 
               </tr>
             ))}
           </tbody>

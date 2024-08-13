@@ -17,7 +17,7 @@ const Bookingpage = () => {
 
     useEffect(() => {
         if (userEmail) {
-            axios.get('http://localhost:3001/bookings')
+            axios.get('http://localhost:8000/api/bookings/')
                 .then(response => {
                     const data = response.data;
                     const userBookings = data.filter(booking => booking.email === userEmail);
@@ -42,7 +42,7 @@ const Bookingpage = () => {
                     {bookings.length > 0 ? (
                         bookings.map(booking => (
                             <div key={booking.id} className="booking-card">
-                                <h2>{booking.boatName}</h2>
+                                <h2>{booking.boat_name}</h2>
                                 <p>Date: {booking.date}</p>
                                 <p>Days: {booking.days}</p>
                                 <p>Persons: {booking.persons}</p>

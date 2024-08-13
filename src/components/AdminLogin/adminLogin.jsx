@@ -16,7 +16,7 @@ const AdminLogin = () => {
     setErrorMessage('');
 
     try {
-      const response = await axios.get('http://localhost:3001/admins');
+      const response = await axios.get('http://localhost:8000/api/admins/');
       const admins = response.data;
 
       const admin = admins.find(a => a.email === email && a.password === password);

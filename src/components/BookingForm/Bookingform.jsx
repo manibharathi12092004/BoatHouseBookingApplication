@@ -39,23 +39,23 @@ const Bookingform = () => {
             rooms, 
             food, 
             days, 
-            boatId: boat.id,
-            boatName: boat.name 
+            boat_id: boat.id,
+            boat_name: boat.name 
         };
         const boatDetails = { 
             id: boat.id,
             name: boat.name,
             price: boat.price,
             location: boat.location, 
-            userEmail: email
+            user_email: email
         };
 
 
-        axios.post('http://localhost:3001/bookings', bookingDetails)
+        axios.post('http://localhost:8000/api/bookings/', bookingDetails)
             .then(response => {
                 console.log("Booking details:", response.data);
                 alert('Booking confirmed.Payment details will be send through Email or Whatsapp');
-                return axios.post('http://localhost:3001/boats', boatDetails);
+                return axios.post('http://localhost:8000/api/boats/', boatDetails);
             })
             .then(boatResponse => {
                 console.log("Boat details stored:", boatResponse.data);

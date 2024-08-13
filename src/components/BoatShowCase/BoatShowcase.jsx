@@ -9,13 +9,14 @@ const BoatShowcase = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:3001/boatData')
+        fetch('http://localhost:8000/api/boatdata/')
             .then(response => response.json())
             .then(data => {
                 setBoats(data);
                 setFilteredBoats(data);
             });
     }, []);
+
 
     useEffect(() => {
         const filtered = boats.filter(boat =>

@@ -10,7 +10,7 @@ const UserBookedDetails = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/bookings');
+        const response = await axios.get('http://localhost:8000/api/bookings/');
         setBookings(response.data);
       } catch (error) {
         console.error('Error fetching bookings:', error);
@@ -52,7 +52,7 @@ const UserBookedDetails = () => {
                 <td>{booking.rooms}</td>
                 <td>{booking.food}</td>
                 <td>{booking.days}</td>
-                <td>{booking.boatName}</td> 
+                <td>{booking.boat_name}</td> 
               </tr>
             ))}
           </tbody>

@@ -17,7 +17,7 @@ const AdminPage = () => {
     type: '',
     capacity: '',
     features: '',
-    extraImages: ''
+    extra_images: '' // Updated field name
   });
   const [editingBoat, setEditingBoat] = useState(null);
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ const AdminPage = () => {
 
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/users');
+        const response = await axios.get('http://localhost:8000/api/users/');
         setUsers(response.data);
       } catch (error) {
         console.error('Error fetching users:', error);
@@ -39,7 +39,7 @@ const AdminPage = () => {
 
     const fetchBoatData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/boatData');
+        const response = await axios.get('http://localhost:8000/api/boatdata/');
         setBoatData(response.data);
       } catch (error) {
         console.error('Error fetching boat data:', error);
@@ -52,7 +52,7 @@ const AdminPage = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/users/${id}`);
+      await axios.delete(`http://localhost:8000/api/users/${id}/`);
       setUsers(users.filter(user => user.id !== id));
     } catch (error) {
       console.error('Error deleting user:', error);
@@ -61,7 +61,7 @@ const AdminPage = () => {
 
   const handleBoatDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/boatData/${id}`);
+      await axios.delete(`http://localhost:8000/api/boatdata/${id}/`);
       setBoatData(boatData.filter(boat => boat.id !== id));
     } catch (error) {
       console.error('Error deleting boat:', error);
@@ -81,10 +81,10 @@ const AdminPage = () => {
     const boatToAdd = {
       ...newBoat,
       features: newBoat.features.split(',').map(f => f.trim()),
-      extraImages: newBoat.extraImages.split(',').map(img => img.trim())
+      extra_images: newBoat.extra_images.split(',').map(img => img.trim()) // Updated field name
     };
 
-    axios.post('http://localhost:3001/boatData', boatToAdd)
+    axios.post('http://localhost:8000/api/boatdata/', boatToAdd)
       .then(response => {
         setBoatData([...boatData, response.data]);
         setNewBoat({
@@ -96,7 +96,7 @@ const AdminPage = () => {
           type: '',
           capacity: '',
           features: '',
-          extraImages: ''
+          extra_images: '' // Updated field name
         });
       })
       .catch(error => console.error('Error adding boat:', error));
@@ -114,19 +114,18 @@ const AdminPage = () => {
       type: boatToEdit.type,
       capacity: boatToEdit.capacity,
       features: boatToEdit.features.join(', '),
-      extraImages: boatToEdit.extraImages.join(', ')
+      extra_images: boatToEdit.extra_images.join(', ') // Updated field name
     });
   };
 
   const updateBoat = () => {
     const updatedBoat = {
-      ...editingBoat,
       ...newBoat,
       features: newBoat.features.split(',').map(f => f.trim()),
-      extraImages: newBoat.extraImages.split(',').map(img => img.trim())
+      extra_images: newBoat.extra_images.split(',').map(img => img.trim()) // Updated field name
     };
 
-    axios.put(`http://localhost:3001/boatData/${editingBoat.id}`, updatedBoat)
+    axios.put(`http://localhost:8000/api/boatdata/${editingBoat.id}/`, updatedBoat)
       .then(response => {
         setBoatData(boatData.map(boat => (boat.id === editingBoat.id ? response.data : boat)));
         setEditingBoat(null);
@@ -139,7 +138,7 @@ const AdminPage = () => {
           type: '',
           capacity: '',
           features: '',
-          extraImages: ''
+          extra_images: '' // Updated field name
         });
       })
       .catch(error => console.error('Error updating boat:', error));
@@ -212,7 +211,7 @@ const AdminPage = () => {
           <input type="text" name="type" placeholder="Type" value={newBoat.type} onChange={handleInputChange} />
           <input type="number" name="capacity" placeholder="Capacity" value={newBoat.capacity} onChange={handleInputChange} />
           <input type="text" name="features" placeholder="Features (comma separated)" value={newBoat.features} onChange={handleInputChange} />
-          <input type="text" name="extraImages" placeholder="Extra Images URLs (comma separated)" value={newBoat.extraImages} onChange={handleInputChange} />
+          <input type="text" name="extra_images" placeholder="Extra Images URLs (comma separated)" value={newBoat.extra_images} onChange={handleInputChange} />
 
           <button onClick={editingBoat ? updateBoat : addBoat}>
             {editingBoat ? 'Update Boat' : 'Add Boat'}
