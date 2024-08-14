@@ -1,3 +1,7 @@
+
+/*This is only for reference and I didn't connect db.json with my project instead of this i have used django for backend and connected with my frontend  */
+
+
 {
   "users": [
     {
